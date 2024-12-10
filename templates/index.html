@@ -16,14 +16,14 @@
             {% endfor %}
         {% endif %}
         {% endwith %}
-        <form method="POST" action="/">
-            <div class="mb-3">
-                <label for="emails" class="form-label">Email Addresses (comma-separated)</label>
-                <input type="text" class="form-control" id="emails" name="emails" placeholder="e.g., user1@example.com, user2@example.com">
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <div class="mb-3" style="margin-top: 20px !important;">
+                <label for="file" class="form-label">Upload CSV File with Recepients Email Addresses</label>
+                <input type="file" class="form-control" id="file" name="file" accept=".csv">
             </div>
             <div class="mb-3">
                 <label for="subject" class="form-label">Subject</label>
-                <input class="form-control" id="message" name="subject" rows="4" placeholder="subject"></input>
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject here">
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
